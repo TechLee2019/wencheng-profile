@@ -343,7 +343,7 @@
 				body: message
 			}).done(function(res) {
 			  console.log(res);
-			  toastr.success('Your message has been sent to Ali D.', 'Thank you!');
+			  toastr.success('Your message has been sent to Wencheng Li', 'Thank you!');
 			}).fail(function(err) {
 			  console.log(err);
 			  toastr.error('Failed to send message');
