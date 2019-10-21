@@ -35,8 +35,8 @@ sendContactEmail = (param) => {
     port: 465,
     secure: true,
     auth: {
-      user: 'robbie626827@gmail.com',
-      pass: 'jiyon*@&%@@'
+      user: 'SMTP_GMAIL_ADDRESS',
+      pass: 'SMTP_GMAIL_CREDENTIALS'
     }
   })
   const to = [
