@@ -335,6 +335,11 @@
 				$('form#contact-form #message').focus();
 				return;
 			}
+			// show spin-loader
+			$.loader({
+				className: "blue-with-image-2",
+				content: ""
+			});
 			// send email
 			$.post('https://ali-david-profile.herokuapp.com/contact/ali', {
 				subscriber: name,
@@ -342,11 +347,15 @@
 				subject: subject || '',
 				body: message
 			}).done(function(res) {
-			  console.log(res);
-			  toastr.success('Your message has been sent to Wencheng Li', 'Thank you!');
+				// hide spin-loader
+				$.loader("close");
+				console.log(res);
+				toastr.success('Your message has been sent to Wencheng Li', 'Thank you!');
 			}).fail(function(err) {
-			  console.log(err);
-			  toastr.error('Failed to send message');
+				// hide spin-loader
+				$.loader("close");
+				console.log(err);
+				toastr.error('Failed to send message');
 			});
 		  });
   
