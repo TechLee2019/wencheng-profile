@@ -39,10 +39,7 @@ sendContactEmail = (param) => {
       pass: 'SMTP_GMAIL_CREDENTIALS'
     }
   })
-  const to = [
-    'robbie626827@gmail.com',
-    'ali_david_0418@hotmail.com'
-  ]
+  const to = 'babystar6666@outlook.com'
   let mailOptions = {
     to: to,
     from: param.email,
